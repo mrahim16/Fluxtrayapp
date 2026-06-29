@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+dist
+src-tauri/target
+src-tauri/src
+**/playwright/downloads
+.vscode
+.idea
+.git
