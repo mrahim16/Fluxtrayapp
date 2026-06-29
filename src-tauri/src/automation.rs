@@ -48,8 +48,9 @@ fn resolve_automation_script_path(app: &tauri::AppHandle) -> Result<PathBuf, Str
     }
 
     if let Ok(resource_dir) = app.path().resource_dir() {
-        candidates.push(resource_dir.join("playwright").join("automation.ts"));
         candidates.push(resource_dir.join("automation.ts"));
+        candidates.push(resource_dir.join("playwright").join("automation.ts"));
+        candidates.push(resource_dir.join("resources").join("playwright").join("automation.ts"));
     }
 
     candidates.push(PathBuf::from(env!("CARGO_MANIFEST_DIR"))
