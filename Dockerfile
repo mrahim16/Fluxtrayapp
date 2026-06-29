@@ -7,7 +7,7 @@ FROM node:20-bullseye AS builder
 WORKDIR /app
 
 # Install dependencies first so Docker can cache this layer.
-COPY package*.json tsconfig.json tsconfig.node.json vite.config.ts postcss.config.js tailwind.config.js ./
+COPY package*.json tsconfig.json tsconfig.node.json vite.config.ts postcss.config.js tailwind.config.js index.html ./
 RUN npm install
 
 # Copy source files and build the application.

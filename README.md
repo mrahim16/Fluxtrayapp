@@ -65,16 +65,20 @@ static container. This does not build the Tauri desktop bundle.
 Build the container:
 
 ```bash
-docker build -t fluxbooks-frontend .
+docker build -t tauri-test:latest .
 ```
 
 Run the container:
 
 ```bash
-docker run --rm -p 8080:80 fluxbooks-frontend
+docker run --rm -p 8080:80 tauri-test:latest
 ```
 
 Then open `http://localhost:8080` in your browser.
+
+### GitHub Actions
+
+A workflow is included at [.github/workflows/docker-build.yml](.github/workflows/docker-build.yml) to build the app for Linux, macOS, and Windows, and to build the Docker image automatically on pushes and pull requests.
 
 ### Notes
 
