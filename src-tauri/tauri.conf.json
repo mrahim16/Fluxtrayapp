@@ -33,7 +33,9 @@
       "icons/icon.ico"
     ],
     "resources": [
-     "resources/*"
+     "resources/*",
+     "../playwright/automation.ts",
+     "../playwright/tsconfig.json"
     ]
   }
 }
