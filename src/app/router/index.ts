@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import LoginView from "@/domains/auth/presentation/views/LoginView.vue";
 import DashboardView from "@/domains/dashboard/presentation/views/DashboardView.vue";
 import AutomationView from "@/domains/automation/presentation/views/AutomationView.vue";
+import BillingView from "@/domains/billing/presentation/views/BillingView.vue";
 import MainLayout from "@/shared/layouts/MainLayout.vue";
 
 export const router = createRouter({
@@ -41,6 +42,11 @@ export const router = createRouter({
         {
           path: "automation",
           component: AutomationView,
+        },
+
+        {
+          path: "billing",
+          component: BillingView,
         },
       ],
     },

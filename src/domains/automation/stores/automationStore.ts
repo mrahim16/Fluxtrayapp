@@ -5,7 +5,7 @@ import { automationService } from "../application/automationService";
 import type { AutomationResult, AutomationStatus } from "../types/automation";
 
 const TOTAL_STEPS = 7;
-const STEP_REVEAL_DELAY_MS = 300;
+const STEP_REVEAL_DELAY_MS = 200;
 
 function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));

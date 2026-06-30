@@ -50,6 +50,13 @@ async function testNotification(): Promise<void> {
         >
           {{ t("common.automation") }}
         </RouterLink>
+
+        <RouterLink
+          to="/billing"
+          class="flex rounded-xl px-4 py-3 font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+        >
+          Billing
+        </RouterLink>
       </nav>
     </aside>
 

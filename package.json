@@ -8,7 +8,11 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
-    "playwright:install": "playwright install chromium"
+    "playwright:install": "playwright install chromium",
+    "ensure-browser": "node scripts/ensure-browser.mjs",
+    "pretest:e2e": "npm run ensure-browser",
+    "test:e2e": "npx playwright test --config=playwright.config.ts",
+    "automation:full": "npm run test:e2e"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",
@@ -20,8 +24,9 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.1",
     "@tauri-apps/cli": "^2",
-    "@types/node": "^25.9.3",
+    "@types/node": "^25.9.4",
     "@typescript-eslint/parser": "^8.61.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-typescript": "^14.8.0",
@@ -30,8 +35,8 @@
     "eslint-plugin-vue": "^10.9.2",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
-    "postcss": "^8.5.15",
     "playwright": "^1.49.1",
+    "postcss": "^8.5.15",
     "prettier": "^3.8.4",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.0.0",

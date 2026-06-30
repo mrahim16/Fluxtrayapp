@@ -57,6 +57,39 @@ Sign in, open the **Automation** tab in the sidebar, and click **Run
 Automation**. A Chrome window will open, visit the sample PDF, download it,
 and close again, while the UI shows each step completing.
 
+### Billing Domain POC and full automation flow
+
+A new billing workflow has been added to the app with a full Playwright E2E
+suite that covers:
+
+1. Open the app
+2. Login with the demo user
+3. Navigate to the Billing page
+4. Select the Professional Stripe plan
+5. Capture the hosted Stripe redirect popup
+6. Simulate the Stripe success return
+7. Verify the subscription becomes active
+
+Run the full billing automation with:
+
+```bash
+npm run automation:full
+```
+
+This command starts the Vite dev server, opens the app in Chromium, runs the
+login-to-billing flow, validates the Stripe redirect path, and completes the
+final simulated success return.
+
+If you want to run the desktop automation script directly, use:
+
+```bash
+npm run tauri dev
+```
+
+Then sign in, open the **Automation** tab, and click **Run Automation**. That
+path exercises the Tauri + Playwright automation integration for the existing
+`playwright/automation.ts` script.
+
 ## Docker
 
 The project includes a Dockerfile to build and serve the frontend as a
